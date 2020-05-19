@@ -1,0 +1,20 @@
+{
+  "name": "Timerange Selector",
+  "version": "1.0",
+  "description": "",
+  "minimum_chrome_version": "6",
+  "permissions": ["contextMenus"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+   {
+     "matches": ["https://*.saas.appdynamics.com/*"],
+     "js": ["contentScript.js"]
+   }
+ ],
+  "icons": {
+    "16": "assets/16.png"
+  },
+  "manifest_version": 2
+}
